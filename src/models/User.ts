@@ -9,7 +9,7 @@ export interface IUser extends Document {
     validatePassword(password: string): Promise<boolean>;
 };
 
-const userSchema = new Schema({
+const userSchema = new Schema<IUser>({
     username: {
         type: String,
         required: true,
@@ -39,4 +39,4 @@ userSchema.methods.validatePassword = async function (password: string): Promise
     return await bcrypt.compare(password, this.password);
 };
 
-export default model<IUser>('User', userSchema);
+export default model<IUser>("User", userSchema);
