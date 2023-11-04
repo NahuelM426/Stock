@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Stock', {
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Stock', {
+mongoose.connect('mongodb://localhost/Stock', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
