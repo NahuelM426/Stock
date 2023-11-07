@@ -1,14 +1,14 @@
 import { Router } from 'express'
 const router = Router();
 
-import {postCrearAlmacen,getAlmacen,putupdatePhoto,delateAlmacen} from '../controllers/almacen.controllers'
+import {postCrearAlmacen,getAlmacen,putupdateAlmacen,delateAlmacen} from '../controllers/almacen.controllers'
 
 
 router.route('/almacen')
         .get(getAlmacen)
         .post(postCrearAlmacen)
 router.route('/almacen/:id')
-        .put(putupdatePhoto)
+        .put(putupdateAlmacen)
         .delete(delateAlmacen)
 
 

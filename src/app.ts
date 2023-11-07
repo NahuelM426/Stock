@@ -3,6 +3,7 @@ import morgan from 'morgan';
 
 import AuthController from './routes/auth'
 import AlmacenRouter from './routes/almacen';
+import ProductoRouter from './routes/producto'
 
 const app: Application = express();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', AuthController);
-app.use('/api/almacen',AlmacenRouter)
+app.use('/api/almacen',AlmacenRouter);
+app.use('/api/producto',ProductoRouter);
 
 export default app;

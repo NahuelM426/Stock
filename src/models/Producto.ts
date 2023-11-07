@@ -21,7 +21,10 @@ const ProductoSchema = new Schema({
     cantidad: {
         type: Number,
     },
-    alamacen:{type :Schema.Types.ObjectId,ref:"Almacen"},
+    almacen:{
+        type :Schema.Types.ObjectId,
+        ref:"Almacen"
+    },
 }, {
     timestamps: true
 });

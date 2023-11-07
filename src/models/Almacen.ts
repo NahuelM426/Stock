@@ -4,6 +4,8 @@ export interface IAlmacen extends Document {
     username: string;
     constructora: Boolean;
     productos: Array<object>;
+    regitros: Array<object>;
+
 };
 
 const AlmacenSchema = new Schema({
@@ -18,6 +20,7 @@ const AlmacenSchema = new Schema({
         required:true
     },
     productos:[{type :Schema.Types.ObjectId,ref:"Producto"}],
+    registros:[{type :Schema.Types.ObjectId,ref:"Registro"}],
 }, {
     timestamps: true
 });

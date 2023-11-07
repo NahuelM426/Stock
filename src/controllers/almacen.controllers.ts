@@ -5,8 +5,8 @@ import Producto, { IProducto } from '../models/Producto';
 
 
 export async function getAlmacen(req: Request, res: Response): Promise<Response> {
-    const trabajo = await Almacen.find();
-    return res.json(trabajo);
+    const almacen = await Almacen.find();
+    return res.json(almacen);
 }
 
 export async function postCrearAlmacen(req: Request, res: Response): Promise<Response> {
@@ -58,7 +58,7 @@ export async function delateAlmacen(req: Request, res: Response): Promise<Respon
 }
 
 
-export async function putupdatePhoto(req: Request, res: Response): Promise<Response> {
+export async function putupdateAlmacen(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
     const { username, constructora } = req.body;
     console.log(id)
