@@ -83,14 +83,14 @@ export async function getProductoId(req: Request, res: Response): Promise<Respon
 
 export async function putupdateProducto(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
-    const { codigo,descripcion,unidadMedida,cantidad,alamacen} = req.body;
+    const { codigo,descripcion,unidadMedida,cantidad,almacen} = req.body;
     console.log(id)
     const updatedProducto = await Almacen.findByIdAndUpdate(id, {
         codigo,
         descripcion,
         unidadMedida,
         cantidad,
-        alamacen
+        almacen
     });
     console.log(updatedProducto)
     return res.json({

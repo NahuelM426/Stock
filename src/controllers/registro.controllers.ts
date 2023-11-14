@@ -93,20 +93,20 @@ export async function getRegistroId(req: Request, res: Response): Promise<Respon
 }
 
 
-// export async function putupdateProducto(req: Request, res: Response): Promise<Response> {
-//     const { id } = req.params;
-//     const { codigo,descripcion,unidadMedida,cantidad,alamacen} = req.body;
-//     console.log(id)
-//     const updatedProducto = await Almacen.findByIdAndUpdate(id, {
-//         codigo,
-//         descripcion,
-//         unidadMedida,
-//         cantidad,
-//         alamacen
-//     });
-//     console.log(updatedProducto)
-//     return res.json({
-//         message: 'Actualizacion Exito',
-//         updatedProducto
-//     });
-// }
+export async function putupdateRegistro(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+    const { fecha,descripcion,tipo,productos,almacen} = req.body;
+    console.log(id)
+    const updatedRegistro = await Registro.findByIdAndUpdate(id, {
+        fecha,
+        descripcion,
+        tipo,
+        productos,
+        almacen
+    });
+    console.log(updatedRegistro)
+    return res.json({
+        message: 'Actualizacion Exito',
+        updatedRegistro
+    });
+}
