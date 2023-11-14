@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 
 import Almacen, { IAlmacen } from '../models/Almacen'
 import Producto, { IProducto } from '../models/Producto';
-import { empty } from '@hapi/joi';
+
 
 
 export async function getProducto(req: Request, res: Response): Promise<Response> {

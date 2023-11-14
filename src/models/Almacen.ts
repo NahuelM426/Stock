@@ -4,7 +4,7 @@ export interface IAlmacen extends Document {
     username: string;
     constructora: Boolean;
     productos: Array<object>;
-    regitros: Array<object>;
+    registros: Array<object>;
 
 };
 
