@@ -105,6 +105,7 @@ export async function putupdateRegistro(req: Request, res: Response): Promise<Re
         almacen
     });
     console.log(updatedRegistro)
+    console.log(updatedRegistro)
     return res.json({
         message: 'Actualizacion Exito',
         updatedRegistro
